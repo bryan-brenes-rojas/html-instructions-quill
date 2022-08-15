@@ -1,2 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~quill/dist/quill.snow.css';
+
+.ql-container {
+  border-radius: 0 0 8px 8px;
+
+  .ql-editor {
+    max-height: 200px;
+  }
+}
+
+.ql-toolbar {
+  border-radius: 8px 8px 0 0;
+}

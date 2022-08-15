@@ -1,1 +1,13 @@
-<quill-editor></quill-editor>
+<div class="container" [formGroup]="form">
+  <quill-editor
+    formControlName="text"
+    [modules]="config"
+    placeholder="Enter Text"
+    (onSelectionChanged)="onSelectionChanged($event)"
+    (onContentChanged)="onContentChanged($event)"
+  ></quill-editor>
+
+  <div>
+    <pre>{{ formValue }}</pre>
+  </div>
+</div>

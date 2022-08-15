@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { QuillModule } from 'ngx-quill';
 
@@ -8,7 +9,13 @@ import { InstructionEditorComponent } from './instruction-editor/instruction-edi
 
 @NgModule({
   declarations: [AppComponent, InstructionEditorComponent],
-  imports: [BrowserModule, AppRoutingModule, QuillModule.forRoot()],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    QuillModule.forRoot({}),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
